@@ -1,0 +1,251 @@
+/* body */
+body{
+    background-color: rgb(42, 37, 57);
+    font-family: 'Lato', sans-serif; 
+}
+
+/* all the page content container */
+.main-container{    
+    background-color: rgb(43, 0, 204);
+    margin: auto;
+    padding: 0 2em;
+    width: 95%;
+}
+
+/* general settings
+------------------- */
+
+
+/* margin for all the sections */
+section{
+    margin: 3em 0;
+}
+
+/* aply display grid to those containers */
+header, .image, .text, .media{
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+    gap: 2em;
+}
+
+/* effect when hover over links */
+a:hover{
+    color: rgb(252, 184, 23);
+}
+
+/* image */
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+/* text color */
+li, p, a{
+    color: rgb(215, 201, 255);
+    text-decoration-line: none;
+}
+
+/* all paragraph */
+p{    
+    font-size: 2em;
+    margin-top: 2em;
+}
+
+/* set styles to list items */
+li{
+    display: inline-block;
+    margin: 0 1em;
+}
+
+/* strong text */
+strong{
+    color: white;
+}
+
+/* navigation & header
+---------------------- */
+
+/* h1 color */
+h1{
+    color: white
+}
+
+/* set styles for the navigation bar */
+.nav-bar{    
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid rgb(54, 11, 215);      
+}
+
+/* set the brand logo */
+.logo{
+    font-weight: bolder;
+    font-size: large;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/* all the icons in navigation bar */
+.logo i{
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+/* logo's paragraph */
+.logo p{
+    font-size: medium;
+    padding-bottom: 1em;
+    margin-left: -1.5em;
+}
+
+/* square logo */
+.fa-plus-square{
+    font-size: 2em;
+    color: white;
+}
+
+/* subscribe button in navigation bar */
+.subscribe{
+    font-weight: bolder;
+    font-size: large;
+    background-color: rgb(252, 184, 23);
+    padding: 1em;
+}
+
+/* h1 inside header */
+header h1{
+    grid-column: 1 / 2;
+    font-size: 5em; 
+}
+
+/* paragraph inside header */
+header p{
+    grid-column: 2 / 3;
+}
+
+/* image section
+----------------  */
+
+/* small text below the photo and above subscription input */
+.small-text{
+    font-size: smaller;
+}
+
+/* all elements inside image section */
+.image *{
+    grid-column: 1 / 3;    
+}
+
+/* paragraph inside image section */
+.image p{
+    margin-top: -2em;
+}
+
+/* text section
+----------------*/
+
+/* first paragraph */
+.text :first-child p{
+    grid-column: 1 / 2;
+}
+
+/* second paragraph */
+.text :nth-child(2) p{
+    grid-column: 2 / 3;
+}
+
+/* media section 
+-----------------*/
+
+/* paragraph inside media section */
+.media p{
+    grid-column: 1 / 3;
+    margin-bottom: -2em;
+}
+
+/* input & submit button */
+.inp-btn {
+    grid-column: 1 / 2;
+    display: flex;
+}
+
+/* share & tweet buttons */
+.btns{
+    grid-column: 2 / 3;
+    display: flex;
+    
+}
+
+/* all the elements inside the two divs for subscription & social media */
+.inp-btn *, .btns *{
+    font-size: 2em;
+    padding: 0.5em;
+    background-color: rgb(43, 0, 204);
+    color: rgb(215, 201, 255);
+    border: solid 0.1em rgb(215, 201, 255);
+    flex-grow: 1;
+    margin: 0 0.1em;
+}
+
+/* footer 
+----------*/
+footer{
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid rgb(54, 11, 215);
+    margin-top: 5em;    
+}
+
+/* all the elements in footer section */
+footer > *{
+    margin: 1em;
+}
+
+/* elements part of the footer's logo */
+.footer-logo{
+    display: flex;
+    align-items: center;
+}
+
+/* copiright logo */
+.fa-copyright{
+    color: rgb(215, 201, 255);
+    margin: 0 0.5em;
+}
+
+/* paragraph in footer logo section */
+.footer-p{
+    padding-bottom: 1em;
+}
+
+/* lis items in footer media section */
+.media-links li{
+    margin: 0 -0.2em;
+    border-left-style: solid;
+    border-right-style: solid;
+    border-color: rgb(54, 11, 215);
+    padding: 1em;
+}
+
+@media screen and (max-width: 61.875em){
+    .media{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inp-btn{
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 41.25em){
+    header, .nav-bar, .image, .text, .media, .inp-btn, footer{
+        display: flex;
+        flex-direction: column;
+    }
+}
